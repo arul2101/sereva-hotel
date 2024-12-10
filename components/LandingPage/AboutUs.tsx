@@ -36,8 +36,8 @@ export default function AboutUs() {
         </div>
 
         <div className="">
-          <div className="lg:mb-16 mb-8 lg:flex justify-between items-center">
-            <div className="font-semibold text-[2.4rem] lg:w-[45%] xl:text-[3rem] xl:w-[38%]">Exclusive Premium Facilities</div>
+          <div className="lg:mb-16 mb-8 lg:flex justify-between items-center text-center lg:text-start">
+            <div className="font-semibold text-[2.4rem] lg:w-[45%] xl:text-[3rem] xl:w-[38%] mb-4">Exclusive Premium Facilities</div>
 
             <div className="lg:w-[45%] xl:text-[1.3rem]">Our exclusive amenities include a luxurious swimming pool and breathtaking integrated views. Every corner is meticulously designed to create an exceptional ambiance.</div>
           </div>

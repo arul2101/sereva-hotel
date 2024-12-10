@@ -4,7 +4,7 @@ import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Severa Hotel",
+  title: "Sereva Hotel",
   description: "Secure your dream vacation with a reservation!",
 };
 
