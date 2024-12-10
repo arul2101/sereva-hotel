@@ -21,7 +21,7 @@ const poppins = Poppins({
 
 export default function Navbar() {
   return (
-    <nav className="py-3 text-[#353030] px-2">
+    <nav className="py-3 text-[#353030] px-2 sticky top-0 left-0 right-0 z-[999] bg-white backdrop-blur-[10px] bg-opacity-90">
       <div className="max-w-[1712px] mx-auto flex items-center justify-between">
         <div>
           <Link href='/'>

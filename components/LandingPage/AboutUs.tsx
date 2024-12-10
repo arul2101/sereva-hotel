@@ -12,7 +12,7 @@ const poppins = Poppins({
 
 export default function AboutUs() {
   return (
-    <section className={`${poppins.className} max-w-[1812px] mx-auto px-2 py-12`} id="about-us">
+    <section className={`${poppins.className} max-w-[1812px] mx-auto px-2 py-16`} id="about-us">
       <div className="w-full p-4 space-y-12">
         <div className="lg:flex items-center justify-between">
           <div className="lg:w-[42%]">
@@ -22,12 +22,16 @@ export default function AboutUs() {
           </div>
 
 
-          <div className="space-y-4 mt-10 lg:w-[55%] xl:w-[50%]">
+          <div className="space-y-4 mt-10 lg:w-[45%] xl:w-[40%]">
             <Each of={services} render={({ title, icon, description }) =>
               <div className="flex gap-4 items-center shadow-[9px_9px_11px_4px_rgba(0,_0,_0,_0.1)] p-4 rounded-lg">
-                <div className="text-black h-[5rem] w-[5rem] rounded-full flex justify-center items-center">{icon}</div>
+                <div className="text-black h-[5rem] w-[5rem] rounded-full flex justify-center items-center">
+                  <span>
+                    {icon}
+                  </span>
+                </div>
                 <div className="flex-1">
-                  <h2 className="text-[1.5rem] font-semibold md:text-[1.8rem]">{title}</h2>
+                  <h2 className="text-[1.5rem] font-semibold">{title}</h2>
                   <span className="text-[.8rem] font-light md:text-[1rem]">{description}</span>
                 </div>
               </div>
