@@ -1,12 +1,9 @@
 import {
   Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Card } from "../ui/card"
 import Each from "@/utils/Each"
 import { menuFAQ } from "@/constant"
+import FAQItem from "./FAQItem"
 
 
 export default function FAQ() {
@@ -20,15 +17,9 @@ export default function FAQ() {
 
         <div className="mt-4 lg:w-[50%]">
           <Accordion type="single" collapsible className="w-full space-y-4">
-            <Each of={menuFAQ} render={({ id, question, answer }) =>
-              <Card className="px-6">
-                <AccordionItem value={id}>
-                  <AccordionTrigger className="text-[1.2rem]">{question}</AccordionTrigger>
-                  <AccordionContent>{answer}</AccordionContent>
-                </AccordionItem>
-              </Card>
+            <Each of={menuFAQ} render={(props) =>
+              <FAQItem {...props} />
             } />
-
           </Accordion>
         </div>
       </div>

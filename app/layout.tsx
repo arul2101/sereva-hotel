@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import { roboto } from "@/fonts/index";
 
 export const metadata: Metadata = {
   title: "Sereva Hotel",
   description: "Secure your dream vacation with a reservation!",
 };
-
-const roboto = Roboto({
-  weight: ["400", "500", "700", '300'],
-  subsets: ["latin"],
-});
 
 export default function RootLayout({
   children,

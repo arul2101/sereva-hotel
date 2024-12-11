@@ -1,14 +1,10 @@
-import { Poppins } from "next/font/google";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Each from "@/utils/Each";
 import { facilities, services } from "@/constant/index";
-
-const poppins = Poppins({
-  weight: ['400', '300', '600'],
-  subsets: ["latin"],
-});
+import { poppins } from "@/fonts";
+import AboutServiceItem from "./AboutServiceItem";
+import AboutFacilitieItem from "./AboutFacilitieItem";
 
 export default function AboutUs() {
   return (
@@ -21,20 +17,9 @@ export default function AboutUs() {
             <Button variant='default' className={cn('text-white font-bold lg:h-[3rem] lg:w-[10rem] lg:text-[1.1rem]')}>SAVE A TOUR</Button>
           </div>
 
-
           <div className="space-y-4 mt-10 lg:w-[45%] xl:w-[40%]">
-            <Each of={services} render={({ title, icon, description }) =>
-              <div className="flex gap-4 items-center shadow-[9px_9px_11px_4px_rgba(0,_0,_0,_0.1)] p-4 rounded-lg">
-                <div className="text-black h-[5rem] w-[5rem] rounded-full flex justify-center items-center">
-                  <span>
-                    {icon}
-                  </span>
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-[1.5rem] font-semibold">{title}</h2>
-                  <span className="text-[.8rem] font-light md:text-[1rem]">{description}</span>
-                </div>
-              </div>
+            <Each of={services} render={(props) =>
+              <AboutServiceItem {...props} />
             } />
           </div>
         </div>
@@ -47,17 +32,8 @@ export default function AboutUs() {
           </div>
 
           <div className="flex gap-8 flex-col lg:flex-row lg:justify-center items-center">
-            <Each of={facilities} render={({ title, img, description }) =>
-              <div className="">
-                <div className="mb-2">
-                  <Image src={img} alt={title} height={450} width={450} className="rounded-[2rem]" />
-                </div>
-
-                <div>
-                  <h2 className="font-semibold text-[1.5rem]">{title}</h2>
-                  <span>{description}</span>
-                </div>
-              </div>
+            <Each of={facilities} render={(props) =>
+              <AboutFacilitieItem {...props} />
             } />
           </div>
         </div>

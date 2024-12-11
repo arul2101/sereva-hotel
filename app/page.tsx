@@ -1,7 +1,7 @@
-import Footer from "@/components/Footer";
-import AboutUs from "@/components/LandingPage/AboutUs";
-import BestOffers from "@/components/LandingPage/BestOffers";
-import FAQ from "@/components/LandingPage/FAQ";
+import Footer from "@/components/LandingPage/Footer/Footer";
+import AboutUs from "@/components/LandingPage/AboutUs/AboutUs";
+import BestOffers from "@/components/LandingPage/BestOffers/BestOffers";
+import FAQ from "@/components/LandingPage/FAQ/FAQ";
 import Hero from "@/components/LandingPage/Hero";
 
 export default function Home() {

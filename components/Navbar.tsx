@@ -4,31 +4,18 @@ import { Button } from "./ui/button";
 import { BookText, Globe, LogIn, Menu, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Inter, Poppins } from "next/font/google";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "./ui/navigation-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { DropdownMenuLabel } from "@radix-ui/react-dropdown-menu";
-
-const inter = Inter({
-  weight: ['400', '700'],
-  subsets: ["latin"],
-});
-
-const poppins = Poppins({
-  weight: ['400'],
-  subsets: ["latin"],
-});
+import { poppins } from "@/fonts/index";
+import LogoBrand from "./LogoBrand";
 
 export default function Navbar() {
   return (
     <nav className="py-3 text-[#353030] px-2 sticky top-0 left-0 right-0 z-[999] bg-white backdrop-blur-[10px] bg-opacity-90">
       <div className="max-w-[1712px] mx-auto flex items-center justify-between">
         <div>
-          <Link href='/'>
-            <span className={`${inter.className} font-bold text-[1.3rem]`}>Sereva</span>
-            <span className="text-[2rem]">.</span>
-            <span className="text-primary font-bold text-[1.3rem]">{" "}Hotel</span>
-          </Link>
+          <LogoBrand />
         </div>
 
         <div className="lg:flex lg:items-center gap-12 hidden">
