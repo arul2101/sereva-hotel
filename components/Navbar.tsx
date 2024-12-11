@@ -1,14 +1,13 @@
 import { menuNavbar } from "@/constant/index";
 import Each from "@/utils/Each";
 import { Button } from "./ui/button";
-import { BookText, Globe, LogIn, Menu, Phone } from "lucide-react";
+import { BookText, LogIn } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "./ui/navigation-menu";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
-import { DropdownMenuLabel } from "@radix-ui/react-dropdown-menu";
 import { poppins } from "@/fonts/index";
 import LogoBrand from "./LogoBrand";
+import ContactUs from "./ContactUs";
+import BurgersMenu from "./BurgersMenu";
 
 export default function Navbar() {
   return (
@@ -25,28 +24,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger><Phone className="max-sm:h-5 max-sm:w-5" /></NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <section className="w-[200px] p-4">
-                    <div className="text-primary font-bold text-[1.1rem] py-2">Contact Us</div>
-                    <div className="h-[.01rem] w-full bg-slate-200"></div>
-                    <div className="flex items-center gap-1 py-4">
-                      <Globe className="text-primary h-5 w-5" />
-                      <span className="font-light text-primary">Global Access</span>
-                    </div>
-
-                    <div className="font-light">
-                      +621-7250855
-                    </div>
-                  </section>
-
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          <ContactUs />
           <Button asChild variant='outline' className={cn('max-sm:w-[3rem] h-[2.2rem] w-[7rem] rounded-2xl')}>
             <Link href='/login' className="flex items-center">
               <LogIn />
@@ -60,24 +38,7 @@ export default function Navbar() {
             </Link>
           </Button>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger className="text-black cursor-pointer lg:hidden block outline-none">
-              <Menu className="outline-none" />
-            </DropdownMenuTrigger>
-
-            <DropdownMenuContent className="w-[200px] mt-4 mr-4">
-              <DropdownMenuLabel className="p-2">Menu</DropdownMenuLabel>
-
-              <DropdownMenuSeparator />
-
-              <Each of={menuNavbar} render={({ label, href }) =>
-                <DropdownMenuItem>
-                  <Link href={href} className="w-full transition-all px-4 py-2 rounded-md hover:bg-slate-100 ">{label}</Link>
-                </DropdownMenuItem>
-              } />
-
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <BurgersMenu hidden />
         </div>
       </div>
     </nav>

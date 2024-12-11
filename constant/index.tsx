@@ -31,11 +31,11 @@ export const menuNavbar: Menu[] = [
   },
   {
     label: 'About Us',
-    href: '#about-us'
+    href: '/#about-us'
   },
   {
     label: 'Offers & Inspiration',
-    href: '#best-offers'
+    href: '/#best-offers'
   }
 ];
 
