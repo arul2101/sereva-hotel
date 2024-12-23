@@ -1,4 +1,3 @@
-import Footer from "@/components/LandingPage/Footer/Footer";
 import AboutUs from "@/components/LandingPage/AboutUs/AboutUs";
 import BestOffers from "@/components/LandingPage/BestOffers/BestOffers";
 import FAQ from "@/components/LandingPage/FAQ/FAQ";
@@ -11,7 +10,6 @@ export default function Home() {
       <BestOffers />
       <AboutUs />
       <FAQ />
-      <Footer />
     </>
   );
 }

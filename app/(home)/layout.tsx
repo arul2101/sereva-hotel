@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
 import { roboto } from "@/fonts/index";
+import Footer from "@/components/LandingPage/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Sereva Hotel",
@@ -20,6 +21,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
