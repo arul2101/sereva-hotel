@@ -17,11 +17,11 @@ export default function LogoProfile() {
               <div className="h-[.01rem] w-full bg-slate-200"></div>
               <div className='space-y-4 mt-4'>
                 <Button asChild variant='outline' className={cn('w-full')}>
-                  <Link href='/profile' className='font-light'>Edit Profile</Link>
+                  <Link href='/account/profile' className='font-light'>Edit Profile</Link>
                 </Button>
 
                 <Button asChild variant='outline' className={cn('w-full')}>
-                  <Link href='/my-bookings' className='font-light'>My Bookings</Link>
+                  <Link href='/account/reservations' className='font-light'>Reservations</Link>
                 </Button>
 
                 <Button variant='destructive' className={cn('w-full')}>Logout</Button>
